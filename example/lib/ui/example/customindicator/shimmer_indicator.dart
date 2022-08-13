@@ -4,7 +4,6 @@
  * Time:  2019-07-08 11:05
  */
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../other/shimmer_indicator.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';

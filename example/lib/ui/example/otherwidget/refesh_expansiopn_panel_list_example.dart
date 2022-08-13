@@ -4,9 +4,7 @@
  * Time:  2019-07-01 20:48
  */
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class RefreshExpansionPanelList extends StatefulWidget {

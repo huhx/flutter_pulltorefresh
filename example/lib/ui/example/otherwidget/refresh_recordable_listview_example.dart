@@ -9,9 +9,7 @@
 // found in the LICENSE file.
 
 import 'package:example/other/refresh_recordable_listview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 enum _ReorderableListType {
