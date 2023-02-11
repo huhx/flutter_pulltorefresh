@@ -91,14 +91,15 @@ class _BezierHeaderState extends RefreshIndicatorState<BezierHeader>
   @override
   Future<void> readyToRefresh() {
     final Simulation simulation = SpringSimulation(
-        SpringDescription(
-          mass: 3.4,
-          stiffness: 10000.5,
-          damping: 6,
-        ),
-        _beizerBounceCtl.value,
-        0,
-        1000);
+      SpringDescription(
+        mass: 3.4,
+        stiffness: 10000.5,
+        damping: 6,
+      ),
+      _beizerBounceCtl.value,
+      0,
+      1000,
+    );
     _beizerBounceCtl.animateWith(simulation);
     if (widget.readyRefresh != null) {
       return widget.readyRefresh!();

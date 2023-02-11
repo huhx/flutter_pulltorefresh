@@ -150,7 +150,6 @@ abstract class RefreshIndicatorState<T extends RefreshIndicator>
 
   @override
   void _handleOffsetChange() {
-    // TODO: implement _handleOffsetChange
     super._handleOffsetChange();
     final double overscrollPast = _calculateScrollOffset();
     onOffsetChange(overscrollPast);

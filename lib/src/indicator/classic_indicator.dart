@@ -247,16 +247,17 @@ class _ClassicFooterState extends LoadIndicatorState<ClassicFooter> {
         RefreshLocalizations.of(context)?.currentLocalization ??
             EnRefreshString();
     return Text(
-        mode == LoadStatus.loading
-            ? widget.loadingText ?? strings.loadingText!
-            : LoadStatus.noMore == mode
-                ? widget.noDataText ?? strings.noMoreText!
-                : LoadStatus.failed == mode
-                    ? widget.failedText ?? strings.loadFailedText!
-                    : LoadStatus.canLoading == mode
-                        ? widget.canLoadingText ?? strings.canLoadingText!
-                        : widget.idleText ?? strings.idleLoadingText!,
-        style: widget.textStyle);
+      mode == LoadStatus.loading
+          ? widget.loadingText ?? strings.loadingText!
+          : LoadStatus.noMore == mode
+              ? widget.noDataText ?? strings.noMoreText!
+              : LoadStatus.failed == mode
+                  ? widget.failedText ?? strings.loadFailedText!
+                  : LoadStatus.canLoading == mode
+                      ? widget.canLoadingText ?? strings.canLoadingText!
+                      : widget.idleText ?? strings.idleLoadingText!,
+      style: widget.textStyle,
+    );
   }
 
   Widget _buildIcon(LoadStatus? mode) {

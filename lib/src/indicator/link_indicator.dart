@@ -62,7 +62,6 @@ class _LinkHeaderState extends RefreshIndicatorState<LinkHeader> {
 
   @override
   Widget buildContent(BuildContext context, RefreshStatus? mode) {
-    // TODO: implement buildContent
     return Container();
   }
 }
@@ -72,12 +71,12 @@ class LinkFooter extends LoadIndicator {
   /// the key that widget outside viewport indicator
   final Key linkKey;
 
-  const LinkFooter(
-      {Key? key,
-      required this.linkKey,
-      double height = 0.0,
-      LoadStyle loadStyle = LoadStyle.ShowAlways})
-      : super(height: height, loadStyle: loadStyle, key: key);
+  const LinkFooter({
+    Key? key,
+    required this.linkKey,
+    double height = 0.0,
+    LoadStyle loadStyle = LoadStyle.ShowAlways,
+  }) : super(height: height, loadStyle: loadStyle, key: key);
 
   @override
   State<StatefulWidget> createState() {

@@ -283,8 +283,11 @@ class SmartRefresherState extends State<SmartRefresher> {
   final LoadIndicator defaultFooter = ClassicFooter();
 
   //build slivers from child Widget
-  List<Widget>? _buildSliversByChild(BuildContext context, Widget? child,
-      RefreshConfiguration? configuration) {
+  List<Widget>? _buildSliversByChild(
+    BuildContext context,
+    Widget? child,
+    RefreshConfiguration? configuration,
+  ) {
     List<Widget>? slivers;
     if (child is ScrollView) {
       if (child is BoxScrollView) {
@@ -307,27 +310,32 @@ class SmartRefresherState extends State<SmartRefresher> {
     }
     if (widget.enablePullDown || widget.enableTwoLevel) {
       slivers?.insert(
-          0,
-          widget.header ??
-              (configuration?.headerBuilder != null
-                  ? configuration?.headerBuilder!()
-                  : null) ??
-              defaultHeader);
+        0,
+        widget.header ??
+            (configuration?.headerBuilder != null
+                ? configuration?.headerBuilder!()
+                : null) ??
+            defaultHeader,
+      );
     }
     //insert header or footer
     if (widget.enablePullUp) {
-      slivers?.add(widget.footer ??
-          (configuration?.footerBuilder != null
-              ? configuration?.footerBuilder!()
-              : null) ??
-          defaultFooter);
+      slivers?.add(
+        widget.footer ??
+            (configuration?.footerBuilder != null
+                ? configuration?.footerBuilder!()
+                : null) ??
+            defaultFooter,
+      );
     }
 
     return slivers;
   }
 
   ScrollPhysics _getScrollPhysics(
-      RefreshConfiguration? conf, ScrollPhysics physics) {
+    RefreshConfiguration? conf,
+    ScrollPhysics physics,
+  ) {
     final bool isBouncingPhysics = physics is BouncingScrollPhysics ||
         (physics is AlwaysScrollableScrollPhysics &&
             ScrollConfiguration.of(context)
@@ -362,7 +370,10 @@ class SmartRefresherState extends State<SmartRefresher> {
 
   // build the customScrollView
   Widget? _buildBodyBySlivers(
-      Widget? childView, List<Widget>? slivers, RefreshConfiguration? conf) {
+    Widget? childView,
+    List<Widget>? slivers,
+    RefreshConfiguration? conf,
+  ) {
     Widget? body;
     if (childView is! Scrollable) {
       bool? primary = widget.primary;
@@ -431,12 +442,13 @@ class SmartRefresherState extends State<SmartRefresher> {
               childView.viewportBuilder(context, offset) as Viewport;
           if (widget.enablePullDown) {
             viewport.children.insert(
-                0,
-                widget.header ??
-                    (conf?.headerBuilder != null
-                        ? conf?.headerBuilder!()
-                        : null) ??
-                    defaultHeader);
+              0,
+              widget.header ??
+                  (conf?.headerBuilder != null
+                      ? conf?.headerBuilder!()
+                      : null) ??
+                  defaultHeader,
+            );
           }
           //insert header or footer
           if (widget.enablePullUp) {

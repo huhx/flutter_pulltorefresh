@@ -36,34 +36,35 @@ class RefreshPhysics extends ScrollPhysics {
   RenderViewport? viewportRender;
 
   /// Creates scroll physics that bounce back from the edge.
-  RefreshPhysics(
-      {ScrollPhysics? parent,
-      this.updateFlag,
-      this.maxUnderScrollExtent,
-      this.springDescription,
-      this.controller,
-      this.dragSpeedRatio,
-      this.topHitBoundary,
-      this.bottomHitBoundary,
-      this.enableScrollWhenRefreshCompleted,
-      this.enableScrollWhenTwoLevel,
-      this.maxOverScrollExtent})
-      : super(parent: parent);
+  RefreshPhysics({
+    ScrollPhysics? parent,
+    this.updateFlag,
+    this.maxUnderScrollExtent,
+    this.springDescription,
+    this.controller,
+    this.dragSpeedRatio,
+    this.topHitBoundary,
+    this.bottomHitBoundary,
+    this.enableScrollWhenRefreshCompleted,
+    this.enableScrollWhenTwoLevel,
+    this.maxOverScrollExtent,
+  }) : super(parent: parent);
 
   @override
   RefreshPhysics applyTo(ScrollPhysics? ancestor) {
     return RefreshPhysics(
-        parent: buildParent(ancestor),
-        updateFlag: updateFlag,
-        springDescription: springDescription,
-        dragSpeedRatio: dragSpeedRatio,
-        enableScrollWhenTwoLevel: enableScrollWhenTwoLevel,
-        topHitBoundary: topHitBoundary,
-        bottomHitBoundary: bottomHitBoundary,
-        controller: controller,
-        enableScrollWhenRefreshCompleted: enableScrollWhenRefreshCompleted,
-        maxUnderScrollExtent: maxUnderScrollExtent,
-        maxOverScrollExtent: maxOverScrollExtent);
+      parent: buildParent(ancestor),
+      updateFlag: updateFlag,
+      springDescription: springDescription,
+      dragSpeedRatio: dragSpeedRatio,
+      enableScrollWhenTwoLevel: enableScrollWhenTwoLevel,
+      topHitBoundary: topHitBoundary,
+      bottomHitBoundary: bottomHitBoundary,
+      controller: controller,
+      enableScrollWhenRefreshCompleted: enableScrollWhenRefreshCompleted,
+      maxUnderScrollExtent: maxUnderScrollExtent,
+      maxOverScrollExtent: maxOverScrollExtent,
+    );
   }
 
   RenderViewport? findViewport(BuildContext? context) {
