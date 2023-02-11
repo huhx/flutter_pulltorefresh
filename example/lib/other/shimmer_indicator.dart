@@ -28,14 +28,13 @@ class ShimmerHeader extends RefreshIndicator {
       this.baseColor = Colors.grey,
       this.highlightColor = Colors.white,
       this.outerBuilder,
-      double height: 80.0,
+      double height = 80.0,
       this.period = const Duration(milliseconds: 1000),
       this.direction = ShimmerDirection.ltr})
       : super(height: height, refreshStyle: RefreshStyle.Behind);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _ShimmerHeaderState();
   }
 }
@@ -47,7 +46,6 @@ class _ShimmerHeaderState extends RefreshIndicatorState<ShimmerHeader>
 
   @override
   void initState() {
-    // TODO: implement initState
     _scaleController = AnimationController(vsync: this);
     _fadeController = AnimationController(vsync: this);
     super.initState();
@@ -55,7 +53,6 @@ class _ShimmerHeaderState extends RefreshIndicatorState<ShimmerHeader>
 
   @override
   void onOffsetChange(double offset) {
-    // TODO: implement onOffsetChange
     if (!floating) {
       _scaleController.value = offset / configuration.headerTriggerDistance;
       _fadeController.value = offset / configuration.footerTriggerDistance;
@@ -64,8 +61,6 @@ class _ShimmerHeaderState extends RefreshIndicatorState<ShimmerHeader>
 
   @override
   Widget buildContent(BuildContext context, RefreshStatus mode) {
-    // TODO: implement buildContent
-
     final Widget body = ScaleTransition(
       scale: _scaleController,
       child: FadeTransition(
@@ -107,17 +102,16 @@ class ShimmerFooter extends LoadIndicator {
       this.baseColor = Colors.grey,
       this.highlightColor = Colors.white,
       this.outerBuilder,
-      double height: 80.0,
+      double height = 80.0,
       this.failed,
       this.noMore,
       this.period = const Duration(milliseconds: 1000),
       this.direction = ShimmerDirection.ltr,
-      LoadStyle loadStyle: LoadStyle.ShowAlways})
+      LoadStyle loadStyle = LoadStyle.ShowAlways})
       : super(height: height, loadStyle: loadStyle);
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _ShimmerFooterState();
   }
 }
@@ -125,8 +119,6 @@ class ShimmerFooter extends LoadIndicator {
 class _ShimmerFooterState extends LoadIndicatorState<ShimmerFooter> {
   @override
   Widget buildContent(BuildContext context, LoadStatus mode) {
-    // TODO: implement buildContent
-
     final Widget body = mode == LoadStatus.failed
         ? widget.failed
         : mode == LoadStatus.noMore

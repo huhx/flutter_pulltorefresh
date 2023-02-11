@@ -21,7 +21,6 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 class TwoLevelExample extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _TwoLevelExampleState();
   }
 }
@@ -33,7 +32,6 @@ class _TwoLevelExampleState extends State<TwoLevelExample> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _refreshController1.headerMode.addListener(() {
       setState(() {});
     });
@@ -46,7 +44,6 @@ class _TwoLevelExampleState extends State<TwoLevelExample> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return RefreshConfiguration.copyAncestor(
       context: context,
       enableScrollWhenTwoLevel: true,
@@ -95,13 +92,13 @@ class _TwoLevelExampleState extends State<TwoLevelExample> {
                               appBar: AppBar(),
                               body: Column(
                                 children: <Widget>[
-                                  RaisedButton(
+                                  ElevatedButton(
                                     onPressed: () {
                                       Navigator.of(context).pop();
                                     },
                                     child: Text("点击这里返回上一页!"),
                                   ),
-                                  RaisedButton(
+                                  ElevatedButton(
                                     onPressed: () {
                                       _refreshController1.requestTwoLevel();
                                     },
@@ -143,7 +140,7 @@ class _TwoLevelExampleState extends State<TwoLevelExample> {
                   slivers: <Widget>[
                     SliverToBoxAdapter(
                       child: Container(
-                        child: RaisedButton(
+                        child: ElevatedButton(
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
@@ -189,7 +186,6 @@ class _TwoLevelExampleState extends State<TwoLevelExample> {
 class TwoLevelWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -203,8 +199,7 @@ class TwoLevelWidget extends StatelessWidget {
           Center(
             child: Wrap(
               children: <Widget>[
-                RaisedButton(
-                  color: Colors.greenAccent,
+                ElevatedButton(
                   onPressed: () {},
                   child: Text("登陆"),
                 ),

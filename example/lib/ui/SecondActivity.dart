@@ -27,7 +27,6 @@ class SecondActivity extends StatefulWidget {
 class _SecondActivityState extends State<SecondActivity> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by

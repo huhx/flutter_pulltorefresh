@@ -4,7 +4,7 @@
  * Time: 2019/5/3 下午6:13
  */
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide MenuController;
 import 'package:residemenu/residemenu.dart';
 import 'example/ExamplePage.dart';
 import 'test/TestPage.dart';
@@ -17,7 +17,6 @@ class MainActivity extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _MainActivityState();
   }
 }
@@ -46,8 +45,6 @@ class _MainActivityState extends State<MainActivity>
 
   @override
   void initState() {
-    // TODO: implement initState
-
     super.initState();
     _tabController = TabController(length: 6, vsync: this);
     _menuController =
@@ -62,7 +59,6 @@ class _MainActivityState extends State<MainActivity>
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ResideMenu.scaffold(
       controller: _menuController,
       enable3dRotate: true,

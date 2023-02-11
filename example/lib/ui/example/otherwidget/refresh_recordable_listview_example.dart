@@ -236,7 +236,7 @@ class _ListDemoState extends State<ReorderableListDemo> {
               ? Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text('Header of the list',
-                      style: Theme.of(context).textTheme.headline1))
+                      style: Theme.of(context).textTheme.displayLarge))
               : null,
           onReorder: _onReorder,
           reverse: _reverse,

@@ -18,7 +18,6 @@ import '../../../other/expanded_viewport.dart';
 class QQChatList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _QQChatListState();
   }
 }
@@ -183,9 +182,8 @@ class _QQChatListState extends State<QQChatList> {
                           margin: EdgeInsets.all(10.0),
                         ),
                       ),
-                      RaisedButton(
+                      ElevatedButton(
                         child: Text("发送"),
-                        color: Colors.blueAccent,
                         onPressed: () {
                           _scrollController.jumpTo(0.0);
                           data.insert(

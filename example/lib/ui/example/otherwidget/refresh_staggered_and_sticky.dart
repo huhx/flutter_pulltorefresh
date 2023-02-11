@@ -32,12 +32,12 @@ class RefreshStaggeredAndStickyState extends State<RefreshStaggeredAndSticky>
   void _getDatas() {
     data.add(Row(
       children: <Widget>[
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController.requestRefresh();
             },
             child: Text("请求刷新")),
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController.requestLoading();
             },
@@ -69,7 +69,6 @@ class RefreshStaggeredAndStickyState extends State<RefreshStaggeredAndSticky>
 
   @override
   void initState() {
-    // TODO: implement initState
     _getDatas();
     _refreshController = RefreshController(initialRefresh: true);
     super.initState();
@@ -77,7 +76,6 @@ class RefreshStaggeredAndStickyState extends State<RefreshStaggeredAndSticky>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _refreshController.dispose();
     super.dispose();
   }

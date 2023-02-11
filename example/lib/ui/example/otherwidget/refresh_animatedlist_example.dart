@@ -178,13 +178,13 @@ class ListModel<E> {
 /// This widget's height is based on the animation parameter, it varies
 /// from 0 to 128 as the animation varies from 0.0 to 1.0.
 class CardItem extends StatelessWidget {
-  const CardItem(
-      {Key key,
-      @required this.animation,
-      this.onTap,
-      @required this.item,
-      this.selected: false})
-      : assert(animation != null),
+  const CardItem({
+    Key key,
+    @required this.animation,
+    this.onTap,
+    @required this.item,
+    this.selected = false,
+  })  : assert(animation != null),
         assert(item != null && item >= 0),
         assert(selected != null),
         super(key: key);
@@ -196,7 +196,7 @@ class CardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = Theme.of(context).textTheme.bodyText1;
+    TextStyle textStyle = Theme.of(context).textTheme.bodyLarge;
     if (selected)
       textStyle = textStyle.copyWith(color: Colors.lightGreenAccent[400]);
     return new Padding(

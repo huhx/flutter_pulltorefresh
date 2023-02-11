@@ -22,7 +22,8 @@ class TestPage extends StatefulWidget {
   _TestPageState createState() => new _TestPageState();
 }
 
-class _TestPageState extends State<TestPage> with SingleTickerProviderStateMixin {
+class _TestPageState extends State<TestPage>
+    with SingleTickerProviderStateMixin {
   int tabIndex = 0;
   PageController _pageController;
   List<Widget> views;
@@ -68,19 +69,23 @@ class _TestPageState extends State<TestPage> with SingleTickerProviderStateMixin
         BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: tabIndex == 0 ? Colors.blue : Colors.grey),
+              icon: Icon(Icons.home,
+                  color: tabIndex == 0 ? Colors.blue : Colors.grey),
               label: 'Example1',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.cloud, color: tabIndex == 1 ? Colors.blue : Colors.grey),
+              icon: Icon(Icons.cloud,
+                  color: tabIndex == 1 ? Colors.blue : Colors.grey),
               label: 'Example2',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.call, color: tabIndex == 2 ? Colors.blue : Colors.grey),
+              icon: Icon(Icons.call,
+                  color: tabIndex == 2 ? Colors.blue : Colors.grey),
               label: 'Example3',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.transform, color: tabIndex == 3 ? Colors.blue : Colors.grey),
+              icon: Icon(Icons.transform,
+                  color: tabIndex == 3 ? Colors.blue : Colors.grey),
               label: 'Example4',
             ),
           ],
@@ -99,7 +104,12 @@ class _TestPageState extends State<TestPage> with SingleTickerProviderStateMixin
   void initState() {
     // TODO: implement initState
     _pageController = PageController();
-    views = [Test1(key: example1Key), Test2(), Test3(key: example3Key), Test4()];
+    views = [
+      Test1(key: example1Key),
+      Test2(),
+      Test3(key: example3Key),
+      Test4()
+    ];
     super.initState();
   }
 }

@@ -4,9 +4,9 @@
 
 import 'dart:math';
 
+import 'package:flutter/material.dart' hide RefreshIndicator;
 import 'package:flutter/rendering.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:flutter/material.dart' hide RefreshIndicator;
 
 // Examples can assume:
 // class MyDataObject { }
@@ -71,8 +71,8 @@ class RefreshReorderableListView extends StatefulWidget {
     @required this.refreshController,
     this.refreshHeader,
     this.refreshFooter,
-    this.enablePullDown: true,
-    this.enablePullUp: false,
+    this.enablePullDown = true,
+    this.enablePullUp = false,
     this.onRefresh,
     this.onLoading,
   })  : assert(scrollDirection != null),
@@ -187,8 +187,8 @@ class _ReorderableListContent extends StatefulWidget {
     @required this.refreshController,
     this.refreshHeader,
     this.refreshFooter,
-    this.enablePullDown: true,
-    this.enablePullUp: false,
+    this.enablePullDown = true,
+    this.enablePullUp = false,
     this.onRefresh,
     this.onLoading,
     this.onOffsetChange,
@@ -413,7 +413,6 @@ class _ReorderableListContentState extends State<_ReorderableListContent>
       setState(() {
         if (startIndex != endIndex) widget.onReorder(startIndex, endIndex);
         // Animates leftover space in the drop area closed.
-        // TODO(djshuckerow): bring the animation in line with the Material
         // specifications.
         _ghostController.reverse(from: 0.1);
         _entranceController.reverse(from: 0.1);
@@ -510,7 +509,8 @@ class _ReorderableListContentState extends State<_ReorderableListContent>
         ),
         child: _dragging == toWrap.key ? const SizedBox() : toWrapWithSemantics,
         childWhenDragging: const SizedBox(),
-        onDragStarted: onDragStarted, dragAnchorStrategy: childDragAnchorStrategy,
+        onDragStarted: onDragStarted,
+        dragAnchorStrategy: childDragAnchorStrategy,
         // When the drag ends inside a DragTarget widget, the drag
         // succeeds, and we reorder the widget into position appropriately.
         onDragCompleted: onDragEnded,

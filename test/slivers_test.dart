@@ -15,7 +15,7 @@ import 'test_indicator.dart';
 Future<void>? buildNotFullList(tester, bool reverse, Axis direction,
     {dynamic footer = const TestFooter(),
     dynamic header = const TestHeader(),
-    bool initload: false}) {
+    bool initload = false}) {
   final RefreshController _refreshController = RefreshController(
       initialLoadStatus: initload ? LoadStatus.loading : LoadStatus.idle);
   return tester.pumpWidget(MaterialApp(

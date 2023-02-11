@@ -22,7 +22,7 @@ class Test3State extends State<Test3> with TickerProviderStateMixin {
   void _getDatas() {
     data.add(Row(
       children: <Widget>[
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController
                   .requestRefresh(needCallback: false)
@@ -33,7 +33,7 @@ class Test3State extends State<Test3> with TickerProviderStateMixin {
               });
             },
             child: Text("请求刷新")),
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController
                   .requestLoading(needCallback: false)

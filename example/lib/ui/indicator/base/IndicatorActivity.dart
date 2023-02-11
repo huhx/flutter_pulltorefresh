@@ -19,16 +19,16 @@ class IndicatorActivity extends StatefulWidget {
   final bool enableOverScroll;
   final bool reverse;
 
-  IndicatorActivity(
-      {this.title,
-      this.header,
-      this.reverse: false,
-      this.footer,
-      this.enableOverScroll: true});
+  IndicatorActivity({
+    this.title,
+    this.header,
+    this.reverse = false,
+    this.footer,
+    this.enableOverScroll = true,
+  });
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _IndicatorActivityState();
   }
 }
@@ -49,7 +49,6 @@ class _IndicatorActivityState extends State<IndicatorActivity> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _scrollController = new ScrollController();
     _refreshController = RefreshController();
     Future.delayed(Duration(milliseconds: 3000)).then((_) {
@@ -62,14 +61,12 @@ class _IndicatorActivityState extends State<IndicatorActivity> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _refreshController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by

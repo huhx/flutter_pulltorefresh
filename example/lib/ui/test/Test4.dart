@@ -22,12 +22,12 @@ class Test4State extends State<Test4> with TickerProviderStateMixin {
   void _getDatas() {
     data.add(Row(
       children: <Widget>[
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController.requestRefresh();
             },
             child: Text("请求刷新")),
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController.requestLoading();
             },
@@ -153,13 +153,13 @@ class Test4State extends State<Test4> with TickerProviderStateMixin {
                   Center(
                     child: Row(
                       children: <Widget>[
-                        RaisedButton(
+                        ElevatedButton(
                           child: Text("主动刷新(移动)"),
                           onPressed: () {
                             _refreshController.requestRefresh();
                           },
                         ),
-                        RaisedButton(
+                        ElevatedButton(
                           child: Text("主动加载"),
                           onPressed: () {
                             _refreshController.requestLoading();

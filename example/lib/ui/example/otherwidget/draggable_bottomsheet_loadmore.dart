@@ -28,20 +28,18 @@ class _DraggableLoadingBottomSheetState
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     for (int i = 0; i < 15; i++) items.add("数据");
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: const Text('DraggableScrollableSheet'),
       ),
       body: Container(
-        child: RaisedButton(
+        child: ElevatedButton(
           onPressed: () {
             showModalBottomSheet(
                 backgroundColor: Colors.transparent,
