@@ -169,8 +169,9 @@ class _ClassicHeaderState extends RefreshIndicatorState<ClassicHeader> {
     return widget.outerBuilder != null
         ? widget.outerBuilder!(container)
         : Container(
-            child: Center(child: container),
+            alignment: Alignment.center,
             height: widget.height,
+            child: container,
           );
   }
 }
@@ -236,14 +237,12 @@ class ClassicFooter extends LoadIndicator {
         );
 
   @override
-  State<StatefulWidget> createState() {
-    return _ClassicFooterState();
-  }
+  State<StatefulWidget> createState() => _ClassicFooterState();
 }
 
 class _ClassicFooterState extends LoadIndicatorState<ClassicFooter> {
   Widget _buildText(LoadStatus? mode) {
-    RefreshString strings =
+    final RefreshString strings =
         RefreshLocalizations.of(context)?.currentLocalization ??
             EnRefreshString();
     return Text(
@@ -261,7 +260,7 @@ class _ClassicFooterState extends LoadIndicatorState<ClassicFooter> {
   }
 
   Widget _buildIcon(LoadStatus? mode) {
-    Widget? icon = mode == LoadStatus.loading
+    final Widget? icon = mode == LoadStatus.loading
         ? widget.loadingIcon ??
             SizedBox(
               width: 25.0,
@@ -287,9 +286,9 @@ class _ClassicFooterState extends LoadIndicatorState<ClassicFooter> {
 
   @override
   Widget buildContent(BuildContext context, LoadStatus? mode) {
-    Widget textWidget = _buildText(mode);
-    Widget iconWidget = _buildIcon(mode);
-    List<Widget> children = <Widget>[iconWidget, textWidget];
+    final Widget textWidget = _buildText(mode);
+    final Widget iconWidget = _buildIcon(mode);
+    final List<Widget> children = <Widget>[iconWidget, textWidget];
     final Widget container = Wrap(
       spacing: widget.spacing,
       textDirection: widget.iconPos == IconPosition.left
@@ -310,9 +309,8 @@ class _ClassicFooterState extends LoadIndicatorState<ClassicFooter> {
         ? widget.outerBuilder!(container)
         : Container(
             height: widget.height,
-            child: Center(
-              child: container,
-            ),
+            alignment: Alignment.center,
+            child: container,
           );
   }
 }
