@@ -60,8 +60,7 @@ class RunningHeader extends RefreshIndicator {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return RunningHeaderState();
+        return RunningHeaderState();
   }
 }
 
@@ -109,14 +108,12 @@ Then when this method is finished, floating = false, the header starts to hide.
 
     @override
     Future<void> endRefresh() {
-      // TODO: implement endRefresh
-      return _offsetController.animateTo(1.0).whenComplete(() {});
+            return _offsetController.animateTo(1.0).whenComplete(() {});
     }
 
 
   Widget buildContent(BuildContext context, RefreshStatus mode) {
-    // TODO: implement buildContent
-    return SlideTransition(
+        return SlideTransition(
       child: ScaleTransition(
         child: (mode != RefreshStatus.idle || mode != RefreshStatus.canRefresh)
             ? Image.asset("images/custom_2.gif")
@@ -136,8 +133,7 @@ So what should we do here? There is no specific method inside, but you can resto
 
   @override
   void resetValue() {
-    // TODO: implement handleModeChange
-      _scaleAnimation.value = 0.0;
+          _scaleAnimation.value = 0.0;
       _offsetController.value = 0.0;
   }
 

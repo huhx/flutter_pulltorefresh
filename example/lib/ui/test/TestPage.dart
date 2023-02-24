@@ -102,7 +102,6 @@ class _TestPageState extends State<TestPage>
 
   @override
   void initState() {
-    // TODO: implement initState
     _pageController = PageController();
     views = [
       Test1(key: example1Key),

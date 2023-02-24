@@ -11,7 +11,6 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 class ShimmerIndicatorExample extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _ShimmerIndicatorExampleState();
   }
 }
@@ -42,7 +41,6 @@ class _ShimmerIndicatorExampleState extends State<ShimmerIndicatorExample> {
   ];
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
         header: ShimmerHeader(
           text: Text(

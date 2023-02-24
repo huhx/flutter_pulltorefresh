@@ -17,7 +17,6 @@ import '../../Item.dart';
 class LinkHeaderExample extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _LinkHeaderExampleState();
   }
 }
@@ -31,7 +30,6 @@ class _LinkHeaderExampleState extends State<LinkHeaderExample> {
 
   @override
   void initState() {
-    // TODO: implement initState
     _scrollController.addListener(() {
       final bool ifdismissAppbar = _scrollController.offset >= 136.0;
       if (dismissAppbar != ifdismissAppbar) {
@@ -44,7 +42,6 @@ class _LinkHeaderExampleState extends State<LinkHeaderExample> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _refreshController.dispose();
     _scrollController.dispose();
     super.dispose();
@@ -52,7 +49,6 @@ class _LinkHeaderExampleState extends State<LinkHeaderExample> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return RefreshConfiguration.copyAncestor(
       context: context,
       child: Scaffold(
@@ -120,7 +116,6 @@ class SimpleLinkBar extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _SimpleLinkBarState();
   }
 }
@@ -132,27 +127,23 @@ class _SimpleLinkBarState extends State<SimpleLinkBar>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 
   @override
   void initState() {
-    // TODO: implement initState
     _animationController = AnimationController(vsync: this);
     super.initState();
   }
 
   @override
   Future endRefresh() {
-    // TODO: implement endRefresh
     _animationController.animateTo(0.0, duration: Duration(milliseconds: 300));
     return Future.value();
   }
 
   @override
   void onOffsetChange(double offset) {
-    // TODO: implement onOffsetChange
     if (_status != RefreshStatus.refreshing)
       _animationController.value = offset / 80.0;
     super.onOffsetChange(offset);
@@ -160,7 +151,6 @@ class _SimpleLinkBarState extends State<SimpleLinkBar>
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ScaleTransition(
       child: CupertinoActivityIndicator(),
       scale: _animationController,
@@ -169,7 +159,6 @@ class _SimpleLinkBarState extends State<SimpleLinkBar>
 
   @override
   void onModeChange(RefreshStatus mode) {
-    // TODO: implement onModeChange
     super.onModeChange(mode);
     _status = mode;
     setState(() {});

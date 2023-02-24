@@ -20,7 +20,6 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 class HideFooterManual extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return HideFooterManualState();
   }
 }
@@ -32,7 +31,6 @@ class HideFooterManualState extends State<HideFooterManual> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return RefreshConfiguration.copyAncestor(
       context: context,
       child: LayoutBuilder(

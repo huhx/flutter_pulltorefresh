@@ -41,13 +41,11 @@ class _IndicatorPageState extends State<IndicatorPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     items = [
       IndicatorItem(
           title: "经典指示器(跟随)",
@@ -177,7 +175,6 @@ class _IndicatorPageState extends State<IndicatorPage> {
 class IndicatorItem extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _IndicatorItemState();
   }
 
@@ -193,7 +190,6 @@ class IndicatorItem extends StatefulWidget {
 class _IndicatorItemState extends State<IndicatorItem> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return InkWell(
       onTap: widget.onClick,
       child: Card(

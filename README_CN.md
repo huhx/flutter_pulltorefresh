@@ -119,8 +119,7 @@
   // 1.5.0后,应该没有必要加这一行了
  // @override
  // void dispose() {
-    // TODO: implement dispose
- //   _refreshController.dispose();
+     //   _refreshController.dispose();
 //    super.dispose();
 //  }
 

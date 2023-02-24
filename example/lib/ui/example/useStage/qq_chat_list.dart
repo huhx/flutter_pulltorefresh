@@ -55,13 +55,11 @@ class _QQChatListState extends State<QQChatList> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return CupertinoApp(
       home: RefreshConfiguration.copyAncestor(
         context: context,
@@ -220,7 +218,6 @@ class _MessageItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Container(
       margin: EdgeInsets.only(top: 10.0),
       child: Wrap(

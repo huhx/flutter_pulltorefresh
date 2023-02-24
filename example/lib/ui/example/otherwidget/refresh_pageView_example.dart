@@ -33,14 +33,12 @@ class PageViewExampleState extends State<PageViewExample>
 
   @override
   void initState() {
-    // TODO: implement initState
     _refreshController = RefreshController(initialRefresh: true);
     super.initState();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _refreshController.dispose();
     super.dispose();
   }

@@ -74,7 +74,6 @@ class _HorizontalRefreshState extends State<HorizontalRefresh>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _controller1 = RefreshController();
     _fetch();
@@ -163,10 +162,6 @@ class _HorizontalRefreshState extends State<HorizontalRefresh>
       ],
     );
   }
-
-  @override
-  // TODO: implement wantKeepAlive
-  bool get wantKeepAlive => false;
 }
 
 class Item1 extends StatefulWidget {
@@ -192,7 +187,6 @@ class _ItemState extends State<Item1> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 }

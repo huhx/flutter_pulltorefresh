@@ -15,7 +15,6 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 class DraggableLoadingBottomSheet extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _DraggableLoadingBottomSheetState();
   }
 }

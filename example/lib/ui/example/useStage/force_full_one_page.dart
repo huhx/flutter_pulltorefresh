@@ -105,7 +105,6 @@ class ForceFullExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       controller: _refreshController,
       enablePullUp: true,

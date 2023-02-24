@@ -121,8 +121,7 @@ simple example,***It must be noted here that ListView must be the child of Smart
   // from 1.5.0, it is not necessary to add this line
   //@override
  // void dispose() {
-    // TODO: implement dispose
-  //  _refreshController.dispose();
+      //  _refreshController.dispose();
   //  super.dispose();
  // }
 

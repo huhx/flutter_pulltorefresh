@@ -71,7 +71,6 @@ class Test3State extends State<Test3> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    // TODO: implement initState
     // for test #68 true-> false ->true
 //    Future.delayed(Duration(milliseconds: 3000), () {
 //      _enablePullDown = false;
@@ -125,13 +124,11 @@ class Test3State extends State<Test3> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
   }
 
@@ -201,7 +198,6 @@ class CirclePainter extends CustomClipper<Path> {
 
   @override
   Path getClip(Size size) {
-    // TODO: implement getClip
     final path = Path();
     if (!up) path.moveTo(0.0, size.height);
     path.cubicTo(
@@ -217,7 +213,6 @@ class CirclePainter extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper oldClipper) {
-    // TODO: implement shouldReclip
     return oldClipper != this;
   }
 }

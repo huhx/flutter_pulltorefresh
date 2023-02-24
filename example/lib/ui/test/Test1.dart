@@ -39,11 +39,8 @@ class Test1State extends State<Test1> {
     _refreshController.requestRefresh();
   }
 
-  void _onOffsetCallback(bool isUp, double offset) {}
-
   @override
   void initState() {
-    // TODO: implement initState
     _getDatas();
     _scrollController = ScrollController(keepScrollOffset: true);
     _refreshController = RefreshController();
@@ -139,7 +136,6 @@ class _ItemState extends State<Item> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 }

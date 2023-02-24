@@ -59,7 +59,6 @@ class Test4State extends State<Test4> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    // TODO: implement initState
     // for test #68 true-> false ->true
 //    Future.delayed(Duration(milliseconds: 3000), () {
 //      _enablePullDown = false;
@@ -124,7 +123,6 @@ class Test4State extends State<Test4> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 
@@ -192,10 +190,6 @@ class Test4State extends State<Test4> with TickerProviderStateMixin {
       hideFooterWhenNotFull: false,
     );
   }
-
-  @override
-  // TODO: implement wantKeepAlive
-  bool get wantKeepAlive => false;
 }
 
 class CirclePainter extends CustomClipper<Path> {
@@ -206,7 +200,6 @@ class CirclePainter extends CustomClipper<Path> {
 
   @override
   Path getClip(Size size) {
-    // TODO: implement getClip
     final path = Path();
     if (!up) path.moveTo(0.0, size.height);
     path.cubicTo(
@@ -222,7 +215,6 @@ class CirclePainter extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(CustomClipper oldClipper) {
-    // TODO: implement shouldReclip
     return oldClipper != this;
   }
 }
@@ -230,7 +222,6 @@ class CirclePainter extends CustomClipper<Path> {
 class RefreshListView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _RefreshListViewState();
   }
 
@@ -245,7 +236,6 @@ class _RefreshListViewState extends State<RefreshListView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return show
         ? CustomScrollView(
             slivers: widget.slivers,

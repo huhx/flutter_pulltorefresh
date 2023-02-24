@@ -64,8 +64,7 @@ class RunningHeader extends RefreshIndicator {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return RunningHeaderState();
+        return RunningHeaderState();
   }
 }
 
@@ -113,14 +112,12 @@ class RunningHeaderState extends RefreshIndicatorState<RunningHeader>
 
     @override
     Future<void> endRefresh() {
-      // TODO: implement endRefresh
-      return _offsetController.animateTo(1.0).whenComplete(() {});
+            return _offsetController.animateTo(1.0).whenComplete(() {});
     }
 
 
   Widget buildContent(BuildContext context, RefreshStatus mode) {
-    // TODO: implement buildContent
-    return SlideTransition(
+        return SlideTransition(
       child: ScaleTransition(
         child: (mode != RefreshStatus.idle || mode != RefreshStatus.canRefresh)
             ? Image.asset("images/custom_2.gif")
@@ -140,8 +137,7 @@ class RunningHeaderState extends RefreshIndicatorState<RunningHeader>
 
   @override
   void resetValue() {
-    // TODO: implement handleModeChange
-      _scaleAnimation.value = 0.0;
+          _scaleAnimation.value = 0.0;
       _offsetController.value = 0.0;
   }
 

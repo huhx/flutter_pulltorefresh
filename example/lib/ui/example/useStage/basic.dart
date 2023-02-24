@@ -25,7 +25,6 @@ import '../../Item.dart';
 class BasicExample extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _BasicExampleState();
   }
 }
@@ -38,7 +37,6 @@ class _BasicExampleState extends State<BasicExample>
 
   @override
   void initState() {
-    // TODO: implement initState
     _tabController = TabController(length: 6, vsync: this);
     _tabController.addListener(() {});
     for (int i = 0; i < 10; i++) {
@@ -55,7 +53,6 @@ class _BasicExampleState extends State<BasicExample>
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return RefreshConfiguration.copyAncestor(
       enableLoadingWhenFailed: true,
       context: context,
@@ -123,7 +120,6 @@ class _BasicExampleState extends State<BasicExample>
 class OnlyListView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _OnlyListViewState();
   }
 }
@@ -155,7 +151,6 @@ class _OnlyListViewState extends State<OnlyListView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       key: _refresherKey,
       controller: _refreshController,
@@ -200,7 +195,6 @@ class _OnlyListViewState extends State<OnlyListView> {
 class OnlyGridView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _OnlyGridViewState();
   }
 }
@@ -224,7 +218,6 @@ class _OnlyGridViewState extends State<OnlyGridView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       controller: _refreshController,
       enablePullUp: true,
@@ -268,7 +261,6 @@ class _OnlyGridViewState extends State<OnlyGridView> {
 class NoScrollable extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _NoScrollableState();
   }
 }
@@ -309,7 +301,6 @@ class _NoScrollableState extends State<NoScrollable> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       controller: _refreshController,
       enablePullUp: true,
@@ -351,7 +342,6 @@ class _NoScrollableState extends State<NoScrollable> {
 class SliverAppBarWithList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _SliverAppBarWithListState();
   }
 }
@@ -381,7 +371,6 @@ class _SliverAppBarWithListState extends State<SliverAppBarWithList> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       controller: _refreshController,
       enablePullUp: true,
@@ -423,7 +412,6 @@ class _SliverAppBarWithListState extends State<SliverAppBarWithList> {
 class GridAndList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _GridAndListState();
   }
 }
@@ -459,7 +447,6 @@ class _GridAndListState extends State<GridAndList> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       controller: _refreshController,
       enablePullUp: true,
@@ -501,7 +488,6 @@ class _GridAndListState extends State<GridAndList> {
 class SwiperAndList extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _SwiperAndListState();
   }
 }
@@ -549,7 +535,6 @@ class _SwiperAndListState extends State<SwiperAndList> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       controller: _refreshController,
       enablePullUp: true,

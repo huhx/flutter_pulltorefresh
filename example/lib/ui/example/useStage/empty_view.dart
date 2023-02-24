@@ -17,7 +17,6 @@ class RefreshWithEmptyView extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _RefreshWithEmptyViewState();
   }
 }
@@ -61,7 +60,6 @@ class _RefreshWithEmptyViewState extends State<RefreshWithEmptyView> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SmartRefresher(
       controller: _refreshController,
       enablePullUp: data.length != 0,

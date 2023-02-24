@@ -17,7 +17,6 @@ class GifHeader1 extends RefreshIndicator {
   GifHeader1() : super(height: 80.0, refreshStyle: RefreshStyle.Follow);
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return GifHeader1State();
   }
 }
@@ -28,7 +27,6 @@ class GifHeader1State extends RefreshIndicatorState<GifHeader1>
 
   @override
   void initState() {
-    // TODO: implement initState
     // init frame is 2
     _gifController = GifController(
       vsync: this,
@@ -39,7 +37,6 @@ class GifHeader1State extends RefreshIndicatorState<GifHeader1>
 
   @override
   void onModeChange(RefreshStatus mode) {
-    // TODO: implement onModeChange
     if (mode == RefreshStatus.refreshing) {
       _gifController.repeat(
           min: 0, max: 29, period: Duration(milliseconds: 500));
@@ -49,14 +46,12 @@ class GifHeader1State extends RefreshIndicatorState<GifHeader1>
 
   @override
   Future<void> endRefresh() {
-    // TODO: implement endRefresh
     _gifController.value = 30;
     return _gifController.animateTo(59, duration: Duration(milliseconds: 500));
   }
 
   @override
   void resetValue() {
-    // TODO: implement resetValue
     // reset not ok , the plugin need to update lowwer
     _gifController.value = 0;
     super.resetValue();
@@ -64,7 +59,6 @@ class GifHeader1State extends RefreshIndicatorState<GifHeader1>
 
   @override
   Widget buildContent(BuildContext context, RefreshStatus mode) {
-    // TODO: implement buildContent
     return GifImage(
       image: AssetImage("images/gifindicator1.gif"),
       controller: _gifController,
@@ -75,7 +69,6 @@ class GifHeader1State extends RefreshIndicatorState<GifHeader1>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _gifController.dispose();
     super.dispose();
   }
@@ -86,7 +79,6 @@ class GifFooter1 extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _GifFooter1State();
   }
 }
@@ -97,7 +89,6 @@ class _GifFooter1State extends State<GifFooter1>
 
   @override
   void initState() {
-    // TODO: implement initState
     // init frame is 2
     _gifController = GifController(
       vsync: this,
@@ -108,7 +99,6 @@ class _GifFooter1State extends State<GifFooter1>
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return CustomFooter(
       height: 80,
       builder: (context, mode) {
@@ -136,7 +126,6 @@ class _GifFooter1State extends State<GifFooter1>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _gifController.dispose();
     super.dispose();
   }
@@ -145,7 +134,6 @@ class _GifFooter1State extends State<GifFooter1>
 class GifIndicatorExample1 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return GifIndicatorExample1State();
   }
 }
@@ -154,7 +142,6 @@ class GifIndicatorExample1State extends State<GifIndicatorExample1> {
   RefreshController _controller = RefreshController();
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return RefreshConfiguration.copyAncestor(
       context: context,
       // two attrs enable footer implements the effect in header default

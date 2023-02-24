@@ -16,7 +16,6 @@ class TapButtonRefreshExample extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _TapButtonRefreshExampleState();
   }
 }
@@ -60,7 +59,6 @@ class _TapButtonRefreshExampleState extends State<TapButtonRefreshExample> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _refreshController.headerMode.addListener(() {
       if (_refreshController.headerMode.value == RefreshStatus.idle) {
@@ -74,7 +72,6 @@ class _TapButtonRefreshExampleState extends State<TapButtonRefreshExample> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: SmartRefresher(
         controller: _refreshController,

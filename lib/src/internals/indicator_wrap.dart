@@ -77,8 +77,7 @@ abstract class LoadIndicator extends StatefulWidget {
 ///
 ///  @override
 ///  void initState() {
-///    // TODO: implement initState
-///    _scaleAnimation = AnimationController(vsync: this);
+///    ///    _scaleAnimation = AnimationController(vsync: this);
 ///    _offsetController = AnimationController(
 ///        vsync: this, duration: Duration(milliseconds: 1000));
 ///    offsetTween = Tween(end: Offset(0.6, 0.0), begin: Offset(0.0, 0.0));
@@ -87,8 +86,7 @@ abstract class LoadIndicator extends StatefulWidget {
 ///
 ///  @override
 ///  void onOffsetChange(double offset) {
-///    // TODO: implement onOffsetChange
-///    if (!floating) {
+///    ///    if (!floating) {
 ///      _scaleAnimation.value = offset / 80.0;
 ///    }
 ///    super.onOffsetChange(offset);
@@ -96,29 +94,25 @@ abstract class LoadIndicator extends StatefulWidget {
 ///
 ///  @override
 ///  void resetValue() {
-///    // TODO: implement handleModeChange
-///    _scaleAnimation.value = 0.0;
+///    ///    _scaleAnimation.value = 0.0;
 ///    _offsetController.value = 0.0;
 ///  }
 ///
 ///  @override
 ///  void dispose() {
-///    // TODO: implement dispose
-///    _scaleAnimation.dispose();
+///    ///    _scaleAnimation.dispose();
 ///    _offsetController.dispose();
 ///    super.dispose();
 ///  }
 ///
 ///  @override
 ///  Future<void> endRefresh() {
-///    // TODO: implement endRefresh
-///    return _offsetController.animateTo(1.0).whenComplete(() {});
+///    ///    return _offsetController.animateTo(1.0).whenComplete(() {});
 ///  }
 ///
 ///  @override
 /// Widget buildContent(BuildContext context, RefreshStatus mode) {
-///    // TODO: implement buildContent
-///    return SlideTransition(
+///    ///    return SlideTransition(
 ///      child: ScaleTransition(
 ///        child: (mode != RefreshStatus.idle || mode != RefreshStatus.canRefresh)
 ///            ? Image.asset("images/custom_2.gif")
@@ -374,7 +368,6 @@ abstract class LoadIndicatorState<T extends LoadIndicator> extends State<T>
 
   @override
   Future endLoading() {
-    // TODO: implement endLoading
     return Future.delayed(Duration(milliseconds: 0));
   }
 
@@ -521,7 +514,6 @@ abstract class LoadIndicatorState<T extends LoadIndicator> extends State<T>
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     _lastMode = mode;
   }

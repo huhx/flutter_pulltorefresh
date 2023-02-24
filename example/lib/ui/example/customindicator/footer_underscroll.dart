@@ -14,7 +14,6 @@ import '../../Item.dart';
 class ConvertFooter extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _ConvertFooterState();
   }
 }
@@ -43,7 +42,6 @@ class _ConvertFooterState extends State<ConvertFooter> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       body: RefreshConfiguration.copyAncestor(
         enableBallisticLoad: false,
